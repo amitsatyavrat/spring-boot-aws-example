@@ -1,0 +1,565 @@
+s3://javabhaktaws/spring-boot-aws-exe.jar (S3 location)
+https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar (S3 URL)
+http://ec2-3-86-220-194.compute-1.amazonaws.com:8080/  (URL to access api)
+
+Console Logs:
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+16 package(s) needed for security, out of 26 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-87-119 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-87-119 ~]$ sudo -i
+[root@ip-172-31-87-119 ~]# java -version
+-bash: java: command not found
+[root@ip-172-31-87-119 ~]# java --version
+-bash: java: command not found
+[root@ip-172-31-87-119 ~]# java -version
+-bash: java: command not found
+[root@ip-172-31-87-119 ~]# yum install java-1.8.0-openjdk
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                            | 3.7 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.312.b07-1.amzn2.0.2 will be installed
+--> Processing Dependency: java-1.8.0-openjdk-headless(x86-64) = 1:1.8.0.312.b07-1.amzn2.0.2 for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: xorg-x11-fonts-Type1 for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libjvm.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libjava.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXcomposite(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: gtk2(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: fontconfig(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libjvm.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libjava.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libgif.so.4()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Running transaction check
+---> Package alsa-lib.x86_64 0:1.1.4.1-2.amzn2 will be installed
+---> Package fontconfig.x86_64 0:2.13.0-4.3.amzn2 will be installed
+--> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.13.0-4.3.amzn2.x86_64
+--> Processing Dependency: dejavu-sans-fonts for package: fontconfig-2.13.0-4.3.amzn2.x86_64
+---> Package giflib.x86_64 0:4.1.6-9.amzn2.0.2 will be installed
+--> Processing Dependency: libSM.so.6()(64bit) for package: giflib-4.1.6-9.amzn2.0.2.x86_64
+--> Processing Dependency: libICE.so.6()(64bit) for package: giflib-4.1.6-9.amzn2.0.2.x86_64
+---> Package gtk2.x86_64 0:2.24.31-1.amzn2.0.2 will be installed
+--> Processing Dependency: pango >= 1.20.0-1 for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXrandr >= 1.2.99.4-2 for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: atk >= 1.29.4-2 for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: hicolor-icon-theme for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: gtk-update-icon-cache for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libpango-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libcups.so.2()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libcairo.so.2()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libatk-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXrandr.so.2()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXinerama.so.1()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXfixes.so.3()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXdamage.so.1()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXcursor.so.1()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.312.b07-1.amzn2.0.2 will be installed
+--> Processing Dependency: tzdata-java >= 2021a for package: 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: copy-jdk-configs >= 3.3 for package: 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: pcsc-lite-libs(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: log4j-cve-2021-44228-cve-mitigations for package: 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64
+--> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64
+---> Package libX11.x86_64 0:1.6.7-3.amzn2.0.2 will be installed
+--> Processing Dependency: libX11-common >= 1.6.7-3.amzn2.0.2 for package: libX11-1.6.7-3.amzn2.0.2.x86_64
+--> Processing Dependency: libxcb.so.1()(64bit) for package: libX11-1.6.7-3.amzn2.0.2.x86_64
+---> Package libXcomposite.x86_64 0:0.4.4-4.1.amzn2.0.2 will be installed
+---> Package libXext.x86_64 0:1.3.3-3.amzn2.0.2 will be installed
+---> Package libXi.x86_64 0:1.7.9-1.amzn2.0.2 will be installed
+---> Package libXrender.x86_64 0:0.9.10-1.amzn2.0.2 will be installed
+---> Package libXtst.x86_64 0:1.2.3-1.amzn2.0.2 will be installed
+---> Package xorg-x11-fonts-Type1.noarch 0:7.5-9.amzn2 will be installed
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Running transaction check
+---> Package atk.x86_64 0:2.22.0-3.amzn2.0.2 will be installed
+---> Package cairo.x86_64 0:1.15.12-4.amzn2 will be installed
+--> Processing Dependency: libpixman-1.so.0()(64bit) for package: cairo-1.15.12-4.amzn2.x86_64
+--> Processing Dependency: libGL.so.1()(64bit) for package: cairo-1.15.12-4.amzn2.x86_64
+--> Processing Dependency: libEGL.so.1()(64bit) for package: cairo-1.15.12-4.amzn2.x86_64
+---> Package copy-jdk-configs.noarch 0:3.3-10.amzn2 will be installed
+---> Package cups-libs.x86_64 1:1.6.3-51.amzn2 will be installed
+--> Processing Dependency: libavahi-common.so.3()(64bit) for package: 1:cups-libs-1.6.3-51.amzn2.x86_64
+--> Processing Dependency: libavahi-client.so.3()(64bit) for package: 1:cups-libs-1.6.3-51.amzn2.x86_64
+---> Package dejavu-sans-fonts.noarch 0:2.33-6.amzn2 will be installed
+--> Processing Dependency: dejavu-fonts-common = 2.33-6.amzn2 for package: dejavu-sans-fonts-2.33-6.amzn2.noarch
+---> Package fontpackages-filesystem.noarch 0:1.44-8.amzn2 will be installed
+---> Package gdk-pixbuf2.x86_64 0:2.36.12-3.amzn2 will be installed
+--> Processing Dependency: libjasper.so.1()(64bit) for package: gdk-pixbuf2-2.36.12-3.amzn2.x86_64
+---> Package gtk-update-icon-cache.x86_64 0:3.22.30-3.amzn2 will be installed
+---> Package hicolor-icon-theme.noarch 0:0.12-7.amzn2 will be installed
+---> Package javapackages-tools.noarch 0:3.4.1-11.amzn2 will be installed
+--> Processing Dependency: python-javapackages = 3.4.1-11.amzn2 for package: javapackages-tools-3.4.1-11.amzn2.noarch
+--> Processing Dependency: libxslt for package: javapackages-tools-3.4.1-11.amzn2.noarch
+---> Package libICE.x86_64 0:1.0.9-9.amzn2.0.2 will be installed
+---> Package libSM.x86_64 0:1.2.2-2.amzn2.0.2 will be installed
+---> Package libX11-common.noarch 0:1.6.7-3.amzn2.0.2 will be installed
+---> Package libXcursor.x86_64 0:1.1.15-1.amzn2 will be installed
+---> Package libXdamage.x86_64 0:1.1.4-4.1.amzn2.0.2 will be installed
+---> Package libXfixes.x86_64 0:5.0.3-1.amzn2.0.2 will be installed
+---> Package libXinerama.x86_64 0:1.1.3-2.1.amzn2.0.2 will be installed
+---> Package libXrandr.x86_64 0:1.5.1-2.amzn2.0.3 will be installed
+---> Package libxcb.x86_64 0:1.12-1.amzn2.0.2 will be installed
+--> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.12-1.amzn2.0.2.x86_64
+---> Package lksctp-tools.x86_64 0:1.0.17-2.amzn2.0.2 will be installed
+---> Package log4j-cve-2021-44228-hotpatch.noarch 0:1.3-1.amzn2 will be installed
+---> Package pango.x86_64 0:1.42.4-4.amzn2 will be installed
+--> Processing Dependency: libthai(x86-64) >= 0.1.9 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libXft(x86-64) >= 2.0.0 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: harfbuzz(x86-64) >= 1.4.2 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: fribidi(x86-64) >= 1.0 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libthai.so.0(LIBTHAI_0.1)(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libthai.so.0()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libharfbuzz.so.0()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libfribidi.so.0()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libXft.so.2()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+---> Package pcsc-lite-libs.x86_64 0:1.8.8-7.amzn2 will be installed
+---> Package ttmkfdir.x86_64 0:3.0.9-42.amzn2.0.2 will be installed
+---> Package tzdata-java.noarch 0:2022a-1.amzn2 will be installed
+---> Package xorg-x11-font-utils.x86_64 1:7.5-21.amzn2 will be installed
+--> Processing Dependency: libfontenc.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.5-21.amzn2.x86_64
+--> Running transaction check
+---> Package avahi-libs.x86_64 0:0.6.31-20.amzn2 will be installed
+---> Package dejavu-fonts-common.noarch 0:2.33-6.amzn2 will be installed
+---> Package fribidi.x86_64 0:1.0.2-1.amzn2.1 will be installed
+---> Package harfbuzz.x86_64 0:1.7.5-2.amzn2 will be installed
+--> Processing Dependency: libgraphite2.so.3()(64bit) for package: harfbuzz-1.7.5-2.amzn2.x86_64
+---> Package jasper-libs.x86_64 0:1.900.1-33.amzn2 will be installed
+---> Package libXau.x86_64 0:1.0.8-2.1.amzn2.0.2 will be installed
+---> Package libXft.x86_64 0:2.3.2-2.amzn2.0.2 will be installed
+---> Package libfontenc.x86_64 0:1.1.3-3.amzn2.0.2 will be installed
+---> Package libglvnd-egl.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 will be installed
+--> Processing Dependency: libglvnd(x86-64) = 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 for package: 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+--> Processing Dependency: mesa-libEGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+--> Processing Dependency: libGLdispatch.so.0()(64bit) for package: 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+---> Package libglvnd-glx.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 will be installed
+--> Processing Dependency: mesa-libGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+---> Package libthai.x86_64 0:0.1.14-9.amzn2.0.2 will be installed
+---> Package libxslt.x86_64 0:1.1.28-6.amzn2 will be installed
+---> Package pixman.x86_64 0:0.34.0-1.amzn2.0.2 will be installed
+---> Package python-javapackages.noarch 0:3.4.1-11.amzn2 will be installed
+--> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.amzn2.noarch
+--> Running transaction check
+---> Package graphite2.x86_64 0:1.3.10-1.amzn2.0.2 will be installed
+---> Package libglvnd.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 will be installed
+---> Package mesa-libEGL.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+--> Processing Dependency: mesa-libgbm = 18.3.4-5.amzn2.0.1 for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libxshmfence.so.1()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libwayland-server.so.0()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libwayland-client.so.0()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libglapi.so.0()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libgbm.so.1()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+---> Package mesa-libGL.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+--> Processing Dependency: libXxf86vm.so.1()(64bit) for package: mesa-libGL-18.3.4-5.amzn2.0.1.x86_64
+---> Package python-lxml.x86_64 0:3.2.1-4.amzn2.0.3 will be installed
+--> Running transaction check
+---> Package libXxf86vm.x86_64 0:1.1.4-1.amzn2.0.2 will be installed
+---> Package libwayland-client.x86_64 0:1.17.0-1.amzn2 will be installed
+---> Package libwayland-server.x86_64 0:1.17.0-1.amzn2 will be installed
+---> Package libxshmfence.x86_64 0:1.2-1.amzn2.0.2 will be installed
+---> Package mesa-libgbm.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+---> Package mesa-libglapi.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================
+ Package                                        Arch                    Version                                            Repository                   Size
+=============================================================================================================================================================
+Installing:
+ java-1.8.0-openjdk                             x86_64                  1:1.8.0.312.b07-1.amzn2.0.2                        amzn2-core                  310 k
+Installing for dependencies:
+ alsa-lib                                       x86_64                  1.1.4.1-2.amzn2                                    amzn2-core                  425 k
+ atk                                            x86_64                  2.22.0-3.amzn2.0.2                                 amzn2-core                  258 k
+ avahi-libs                                     x86_64                  0.6.31-20.amzn2                                    amzn2-core                   61 k
+ cairo                                          x86_64                  1.15.12-4.amzn2                                    amzn2-core                  732 k
+ copy-jdk-configs                               noarch                  3.3-10.amzn2                                       amzn2-core                   21 k
+ cups-libs                                      x86_64                  1:1.6.3-51.amzn2                                   amzn2-core                  356 k
+ dejavu-fonts-common                            noarch                  2.33-6.amzn2                                       amzn2-core                   64 k
+ dejavu-sans-fonts                              noarch                  2.33-6.amzn2                                       amzn2-core                  1.4 M
+ fontconfig                                     x86_64                  2.13.0-4.3.amzn2                                   amzn2-core                  253 k
+ fontpackages-filesystem                        noarch                  1.44-8.amzn2                                       amzn2-core                   10 k
+ fribidi                                        x86_64                  1.0.2-1.amzn2.1                                    amzn2-core                   79 k
+ gdk-pixbuf2                                    x86_64                  2.36.12-3.amzn2                                    amzn2-core                  568 k
+ giflib                                         x86_64                  4.1.6-9.amzn2.0.2                                  amzn2-core                   40 k
+ graphite2                                      x86_64                  1.3.10-1.amzn2.0.2                                 amzn2-core                  115 k
+ gtk-update-icon-cache                          x86_64                  3.22.30-3.amzn2                                    amzn2-core                   26 k
+ gtk2                                           x86_64                  2.24.31-1.amzn2.0.2                                amzn2-core                  3.4 M
+ harfbuzz                                       x86_64                  1.7.5-2.amzn2                                      amzn2-core                  279 k
+ hicolor-icon-theme                             noarch                  0.12-7.amzn2                                       amzn2-core                   43 k
+ jasper-libs                                    x86_64                  1.900.1-33.amzn2                                   amzn2-core                  150 k
+ java-1.8.0-openjdk-headless                    x86_64                  1:1.8.0.312.b07-1.amzn2.0.2                        amzn2-core                   33 M
+ javapackages-tools                             noarch                  3.4.1-11.amzn2                                     amzn2-core                   73 k
+ libICE                                         x86_64                  1.0.9-9.amzn2.0.2                                  amzn2-core                   67 k
+ libSM                                          x86_64                  1.2.2-2.amzn2.0.2                                  amzn2-core                   39 k
+ libX11                                         x86_64                  1.6.7-3.amzn2.0.2                                  amzn2-core                  606 k
+ libX11-common                                  noarch                  1.6.7-3.amzn2.0.2                                  amzn2-core                  165 k
+ libXau                                         x86_64                  1.0.8-2.1.amzn2.0.2                                amzn2-core                   29 k
+ libXcomposite                                  x86_64                  0.4.4-4.1.amzn2.0.2                                amzn2-core                   22 k
+ libXcursor                                     x86_64                  1.1.15-1.amzn2                                     amzn2-core                   30 k
+ libXdamage                                     x86_64                  1.1.4-4.1.amzn2.0.2                                amzn2-core                   20 k
+ libXext                                        x86_64                  1.3.3-3.amzn2.0.2                                  amzn2-core                   39 k
+ libXfixes                                      x86_64                  5.0.3-1.amzn2.0.2                                  amzn2-core                   18 k
+ libXft                                         x86_64                  2.3.2-2.amzn2.0.2                                  amzn2-core                   60 k
+ libXi                                          x86_64                  1.7.9-1.amzn2.0.2                                  amzn2-core                   41 k
+ libXinerama                                    x86_64                  1.1.3-2.1.amzn2.0.2                                amzn2-core                   14 k
+ libXrandr                                      x86_64                  1.5.1-2.amzn2.0.3                                  amzn2-core                   27 k
+ libXrender                                     x86_64                  0.9.10-1.amzn2.0.2                                 amzn2-core                   26 k
+ libXtst                                        x86_64                  1.2.3-1.amzn2.0.2                                  amzn2-core                   20 k
+ libXxf86vm                                     x86_64                  1.1.4-1.amzn2.0.2                                  amzn2-core                   17 k
+ libfontenc                                     x86_64                  1.1.3-3.amzn2.0.2                                  amzn2-core                   31 k
+ libglvnd                                       x86_64                  1:1.0.1-0.1.git5baa1e5.amzn2.0.1                   amzn2-core                   89 k
+ libglvnd-egl                                   x86_64                  1:1.0.1-0.1.git5baa1e5.amzn2.0.1                   amzn2-core                   43 k
+ libglvnd-glx                                   x86_64                  1:1.0.1-0.1.git5baa1e5.amzn2.0.1                   amzn2-core                  125 k
+ libthai                                        x86_64                  0.1.14-9.amzn2.0.2                                 amzn2-core                  187 k
+ libwayland-client                              x86_64                  1.17.0-1.amzn2                                     amzn2-core                   34 k
+ libwayland-server                              x86_64                  1.17.0-1.amzn2                                     amzn2-core                   40 k
+ libxcb                                         x86_64                  1.12-1.amzn2.0.2                                   amzn2-core                  216 k
+ libxshmfence                                   x86_64                  1.2-1.amzn2.0.2                                    amzn2-core                  7.2 k
+ libxslt                                        x86_64                  1.1.28-6.amzn2                                     amzn2-core                  240 k
+ lksctp-tools                                   x86_64                  1.0.17-2.amzn2.0.2                                 amzn2-core                   88 k
+ log4j-cve-2021-44228-hotpatch                  noarch                  1.3-1.amzn2                                        amzn2-core                  137 k
+ mesa-libEGL                                    x86_64                  18.3.4-5.amzn2.0.1                                 amzn2-core                  108 k
+ mesa-libGL                                     x86_64                  18.3.4-5.amzn2.0.1                                 amzn2-core                  162 k
+ mesa-libgbm                                    x86_64                  18.3.4-5.amzn2.0.1                                 amzn2-core                   38 k
+ mesa-libglapi                                  x86_64                  18.3.4-5.amzn2.0.1                                 amzn2-core                   45 k
+ pango                                          x86_64                  1.42.4-4.amzn2                                     amzn2-core                  280 k
+ pcsc-lite-libs                                 x86_64                  1.8.8-7.amzn2                                      amzn2-core                   35 k
+ pixman                                         x86_64                  0.34.0-1.amzn2.0.2                                 amzn2-core                  254 k
+ python-javapackages                            noarch                  3.4.1-11.amzn2                                     amzn2-core                   31 k
+ python-lxml                                    x86_64                  3.2.1-4.amzn2.0.3                                  amzn2-core                  1.0 M
+ ttmkfdir                                       x86_64                  3.0.9-42.amzn2.0.2                                 amzn2-core                   50 k
+ tzdata-java                                    noarch                  2022a-1.amzn2                                      amzn2-core                  190 k
+ xorg-x11-font-utils                            x86_64                  1:7.5-21.amzn2                                     amzn2-core                  103 k
+ xorg-x11-fonts-Type1                           noarch                  7.5-9.amzn2                                        amzn2-core                  521 k
+
+Transaction Summary
+=============================================================================================================================================================
+Install  1 Package (+63 Dependent packages)
+
+Total download size: 47 M
+Installed size: 154 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/64): alsa-lib-1.1.4.1-2.amzn2.x86_64.rpm                                                                                           | 425 kB  00:00:00
+(2/64): atk-2.22.0-3.amzn2.0.2.x86_64.rpm                                                                                             | 258 kB  00:00:00
+(3/64): avahi-libs-0.6.31-20.amzn2.x86_64.rpm                                                                                         |  61 kB  00:00:00
+(4/64): cairo-1.15.12-4.amzn2.x86_64.rpm                                                                                              | 732 kB  00:00:00
+(5/64): copy-jdk-configs-3.3-10.amzn2.noarch.rpm                                                                                      |  21 kB  00:00:00
+(6/64): cups-libs-1.6.3-51.amzn2.x86_64.rpm                                                                                           | 356 kB  00:00:00
+(7/64): dejavu-fonts-common-2.33-6.amzn2.noarch.rpm                                                                                   |  64 kB  00:00:00
+(8/64): fontconfig-2.13.0-4.3.amzn2.x86_64.rpm                                                                                        | 253 kB  00:00:00
+(9/64): dejavu-sans-fonts-2.33-6.amzn2.noarch.rpm                                                                                     | 1.4 MB  00:00:00
+(10/64): fontpackages-filesystem-1.44-8.amzn2.noarch.rpm                                                                              |  10 kB  00:00:00
+(11/64): fribidi-1.0.2-1.amzn2.1.x86_64.rpm                                                                                           |  79 kB  00:00:00
+(12/64): gdk-pixbuf2-2.36.12-3.amzn2.x86_64.rpm                                                                                       | 568 kB  00:00:00
+(13/64): giflib-4.1.6-9.amzn2.0.2.x86_64.rpm                                                                                          |  40 kB  00:00:00
+(14/64): graphite2-1.3.10-1.amzn2.0.2.x86_64.rpm                                                                                      | 115 kB  00:00:00
+(15/64): gtk-update-icon-cache-3.22.30-3.amzn2.x86_64.rpm                                                                             |  26 kB  00:00:00
+(16/64): harfbuzz-1.7.5-2.amzn2.x86_64.rpm                                                                                            | 279 kB  00:00:00
+(17/64): hicolor-icon-theme-0.12-7.amzn2.noarch.rpm                                                                                   |  43 kB  00:00:00
+(18/64): gtk2-2.24.31-1.amzn2.0.2.x86_64.rpm                                                                                          | 3.4 MB  00:00:00
+(19/64): jasper-libs-1.900.1-33.amzn2.x86_64.rpm                                                                                      | 150 kB  00:00:00
+(20/64): java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64.rpm                                                                      | 310 kB  00:00:00
+(21/64): javapackages-tools-3.4.1-11.amzn2.noarch.rpm                                                                                 |  73 kB  00:00:00
+(22/64): libICE-1.0.9-9.amzn2.0.2.x86_64.rpm                                                                                          |  67 kB  00:00:00
+(23/64): libSM-1.2.2-2.amzn2.0.2.x86_64.rpm                                                                                           |  39 kB  00:00:00
+(24/64): libX11-1.6.7-3.amzn2.0.2.x86_64.rpm                                                                                          | 606 kB  00:00:00
+(25/64): libX11-common-1.6.7-3.amzn2.0.2.noarch.rpm                                                                                   | 165 kB  00:00:00
+(26/64): libXau-1.0.8-2.1.amzn2.0.2.x86_64.rpm                                                                                        |  29 kB  00:00:00
+(27/64): libXcomposite-0.4.4-4.1.amzn2.0.2.x86_64.rpm                                                                                 |  22 kB  00:00:00
+(28/64): java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64.rpm                                                             |  33 MB  00:00:00
+(29/64): libXcursor-1.1.15-1.amzn2.x86_64.rpm                                                                                         |  30 kB  00:00:00
+(30/64): libXdamage-1.1.4-4.1.amzn2.0.2.x86_64.rpm                                                                                    |  20 kB  00:00:00
+(31/64): libXext-1.3.3-3.amzn2.0.2.x86_64.rpm                                                                                         |  39 kB  00:00:00
+(32/64): libXfixes-5.0.3-1.amzn2.0.2.x86_64.rpm                                                                                       |  18 kB  00:00:00
+(33/64): libXft-2.3.2-2.amzn2.0.2.x86_64.rpm                                                                                          |  60 kB  00:00:00
+(34/64): libXinerama-1.1.3-2.1.amzn2.0.2.x86_64.rpm                                                                                   |  14 kB  00:00:00
+(35/64): libXi-1.7.9-1.amzn2.0.2.x86_64.rpm                                                                                           |  41 kB  00:00:00
+(36/64): libXrandr-1.5.1-2.amzn2.0.3.x86_64.rpm                                                                                       |  27 kB  00:00:00
+(37/64): libXrender-0.9.10-1.amzn2.0.2.x86_64.rpm                                                                                     |  26 kB  00:00:00
+(38/64): libXtst-1.2.3-1.amzn2.0.2.x86_64.rpm                                                                                         |  20 kB  00:00:00
+(39/64): libXxf86vm-1.1.4-1.amzn2.0.2.x86_64.rpm                                                                                      |  17 kB  00:00:00
+(40/64): libfontenc-1.1.3-3.amzn2.0.2.x86_64.rpm                                                                                      |  31 kB  00:00:00
+(41/64): libglvnd-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64.rpm                                                                           |  89 kB  00:00:00
+(42/64): libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64.rpm                                                                       |  43 kB  00:00:00
+(43/64): libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64.rpm                                                                       | 125 kB  00:00:00
+(44/64): libthai-0.1.14-9.amzn2.0.2.x86_64.rpm                                                                                        | 187 kB  00:00:00
+(45/64): libwayland-client-1.17.0-1.amzn2.x86_64.rpm                                                                                  |  34 kB  00:00:00
+(46/64): libwayland-server-1.17.0-1.amzn2.x86_64.rpm                                                                                  |  40 kB  00:00:00
+(47/64): libxcb-1.12-1.amzn2.0.2.x86_64.rpm                                                                                           | 216 kB  00:00:00
+(48/64): libxshmfence-1.2-1.amzn2.0.2.x86_64.rpm                                                                                      | 7.2 kB  00:00:00
+(49/64): libxslt-1.1.28-6.amzn2.x86_64.rpm                                                                                            | 240 kB  00:00:00
+(50/64): lksctp-tools-1.0.17-2.amzn2.0.2.x86_64.rpm                                                                                   |  88 kB  00:00:00
+(51/64): log4j-cve-2021-44228-hotpatch-1.3-1.amzn2.noarch.rpm                                                                         | 137 kB  00:00:00
+(52/64): mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                    | 108 kB  00:00:00
+(53/64): mesa-libgbm-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                    |  38 kB  00:00:00
+(54/64): mesa-libglapi-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                  |  45 kB  00:00:00
+(55/64): mesa-libGL-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                     | 162 kB  00:00:00
+(56/64): pcsc-lite-libs-1.8.8-7.amzn2.x86_64.rpm                                                                                      |  35 kB  00:00:00
+(57/64): pango-1.42.4-4.amzn2.x86_64.rpm                                                                                              | 280 kB  00:00:00
+(58/64): pixman-0.34.0-1.amzn2.0.2.x86_64.rpm                                                                                         | 254 kB  00:00:00
+(59/64): python-javapackages-3.4.1-11.amzn2.noarch.rpm                                                                                |  31 kB  00:00:00
+(60/64): ttmkfdir-3.0.9-42.amzn2.0.2.x86_64.rpm                                                                                       |  50 kB  00:00:00
+(61/64): python-lxml-3.2.1-4.amzn2.0.3.x86_64.rpm                                                                                     | 1.0 MB  00:00:00
+(62/64): tzdata-java-2022a-1.amzn2.noarch.rpm                                                                                         | 190 kB  00:00:00
+(63/64): xorg-x11-font-utils-7.5-21.amzn2.x86_64.rpm                                                                                  | 103 kB  00:00:00
+(64/64): xorg-x11-fonts-Type1-7.5-9.amzn2.noarch.rpm                                                                                  | 521 kB  00:00:00
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                         44 MB/s |  47 MB  00:00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mesa-libglapi-18.3.4-5.amzn2.0.1.x86_64                                                                                                  1/64
+  Installing : libICE-1.0.9-9.amzn2.0.2.x86_64                                                                                                          2/64
+  Installing : libxslt-1.1.28-6.amzn2.x86_64                                                                                                            3/64
+  Installing : 1:libglvnd-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                         4/64
+  Installing : fontpackages-filesystem-1.44-8.amzn2.noarch                                                                                              5/64
+  Installing : libxshmfence-1.2-1.amzn2.0.2.x86_64                                                                                                      6/64
+  Installing : libwayland-server-1.17.0-1.amzn2.x86_64                                                                                                  7/64
+  Installing : mesa-libgbm-18.3.4-5.amzn2.0.1.x86_64                                                                                                    8/64
+  Installing : dejavu-fonts-common-2.33-6.amzn2.noarch                                                                                                  9/64
+  Installing : dejavu-sans-fonts-2.33-6.amzn2.noarch                                                                                                   10/64
+  Installing : fontconfig-2.13.0-4.3.amzn2.x86_64                                                                                                      11/64
+  Installing : python-lxml-3.2.1-4.amzn2.0.3.x86_64                                                                                                    12/64
+  Installing : python-javapackages-3.4.1-11.amzn2.noarch                                                                                               13/64
+  Installing : javapackages-tools-3.4.1-11.amzn2.noarch                                                                                                14/64
+  Installing : libSM-1.2.2-2.amzn2.0.2.x86_64                                                                                                          15/64
+  Installing : tzdata-java-2022a-1.amzn2.noarch                                                                                                        16/64
+  Installing : graphite2-1.3.10-1.amzn2.0.2.x86_64                                                                                                     17/64
+  Installing : harfbuzz-1.7.5-2.amzn2.x86_64                                                                                                           18/64
+  Installing : jasper-libs-1.900.1-33.amzn2.x86_64                                                                                                     19/64
+  Installing : alsa-lib-1.1.4.1-2.amzn2.x86_64                                                                                                         20/64
+  Installing : copy-jdk-configs-3.3-10.amzn2.noarch                                                                                                    21/64
+  Installing : pcsc-lite-libs-1.8.8-7.amzn2.x86_64                                                                                                     22/64
+  Installing : libwayland-client-1.17.0-1.amzn2.x86_64                                                                                                 23/64
+  Installing : pixman-0.34.0-1.amzn2.0.2.x86_64                                                                                                        24/64
+  Installing : hicolor-icon-theme-0.12-7.amzn2.noarch                                                                                                  25/64
+  Installing : fribidi-1.0.2-1.amzn2.1.x86_64                                                                                                          26/64
+  Installing : avahi-libs-0.6.31-20.amzn2.x86_64                                                                                                       27/64
+  Installing : 1:cups-libs-1.6.3-51.amzn2.x86_64                                                                                                       28/64
+  Installing : libthai-0.1.14-9.amzn2.0.2.x86_64                                                                                                       29/64
+  Installing : libfontenc-1.1.3-3.amzn2.0.2.x86_64                                                                                                     30/64
+  Installing : 1:xorg-x11-font-utils-7.5-21.amzn2.x86_64                                                                                               31/64
+  Installing : libXau-1.0.8-2.1.amzn2.0.2.x86_64                                                                                                       32/64
+  Installing : libxcb-1.12-1.amzn2.0.2.x86_64                                                                                                          33/64
+  Installing : libX11-common-1.6.7-3.amzn2.0.2.noarch                                                                                                  34/64
+  Installing : libX11-1.6.7-3.amzn2.0.2.x86_64                                                                                                         35/64
+  Installing : libXext-1.3.3-3.amzn2.0.2.x86_64                                                                                                        36/64
+  Installing : libXrender-0.9.10-1.amzn2.0.2.x86_64                                                                                                    37/64
+  Installing : libXfixes-5.0.3-1.amzn2.0.2.x86_64                                                                                                      38/64
+  Installing : libXi-1.7.9-1.amzn2.0.2.x86_64                                                                                                          39/64
+  Installing : libXdamage-1.1.4-4.1.amzn2.0.2.x86_64                                                                                                   40/64
+  Installing : libXcomposite-0.4.4-4.1.amzn2.0.2.x86_64                                                                                                41/64
+  Installing : gdk-pixbuf2-2.36.12-3.amzn2.x86_64                                                                                                      42/64
+  Installing : gtk-update-icon-cache-3.22.30-3.amzn2.x86_64                                                                                            43/64
+  Installing : libXtst-1.2.3-1.amzn2.0.2.x86_64                                                                                                        44/64
+  Installing : libXcursor-1.1.15-1.amzn2.x86_64                                                                                                        45/64
+  Installing : libXrandr-1.5.1-2.amzn2.0.3.x86_64                                                                                                      46/64
+  Installing : libXft-2.3.2-2.amzn2.0.2.x86_64                                                                                                         47/64
+  Installing : libXinerama-1.1.3-2.1.amzn2.0.2.x86_64                                                                                                  48/64
+  Installing : libXxf86vm-1.1.4-1.amzn2.0.2.x86_64                                                                                                     49/64
+  Installing : 1:libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                    50/64
+  Installing : mesa-libGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                    51/64
+  Installing : 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                    52/64
+  Installing : mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                   53/64
+  Installing : cairo-1.15.12-4.amzn2.x86_64                                                                                                            54/64
+  Installing : pango-1.42.4-4.amzn2.x86_64                                                                                                             55/64
+  Installing : giflib-4.1.6-9.amzn2.0.2.x86_64                                                                                                         56/64
+  Installing : ttmkfdir-3.0.9-42.amzn2.0.2.x86_64                                                                                                      57/64
+  Installing : xorg-x11-fonts-Type1-7.5-9.amzn2.noarch                                                                                                 58/64
+  Installing : lksctp-tools-1.0.17-2.amzn2.0.2.x86_64                                                                                                  59/64
+  Installing : atk-2.22.0-3.amzn2.0.2.x86_64                                                                                                           60/64
+  Installing : gtk2-2.24.31-1.amzn2.0.2.x86_64                                                                                                         61/64
+  Installing : log4j-cve-2021-44228-hotpatch-1.3-1.amzn2.noarch                                                                                        62/64
+Created symlink from /etc/systemd/system/multi-user.target.wants/log4j-cve-2021-44228-hotpatch.service to /usr/lib/systemd/system/log4j-cve-2021-44228-hotpatch.service.
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64                                                                          63/64
+  Installing : 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64                                                                                   64/64
+  Verifying  : libSM-1.2.2-2.amzn2.0.2.x86_64                                                                                                           1/64
+  Verifying  : libwayland-server-1.17.0-1.amzn2.x86_64                                                                                                  2/64
+  Verifying  : libxshmfence-1.2-1.amzn2.0.2.x86_64                                                                                                      3/64
+  Verifying  : 1:xorg-x11-font-utils-7.5-21.amzn2.x86_64                                                                                                4/64
+  Verifying  : log4j-cve-2021-44228-hotpatch-1.3-1.amzn2.noarch                                                                                         5/64
+  Verifying  : 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                     6/64
+  Verifying  : fontpackages-filesystem-1.44-8.amzn2.noarch                                                                                              7/64
+  Verifying  : mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                    8/64
+  Verifying  : libXdamage-1.1.4-4.1.amzn2.0.2.x86_64                                                                                                    9/64
+  Verifying  : pango-1.42.4-4.amzn2.x86_64                                                                                                             10/64
+  Verifying  : 1:java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64                                                                                   11/64
+  Verifying  : libxcb-1.12-1.amzn2.0.2.x86_64                                                                                                          12/64
+  Verifying  : atk-2.22.0-3.amzn2.0.2.x86_64                                                                                                           13/64
+  Verifying  : mesa-libGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                    14/64
+  Verifying  : libXext-1.3.3-3.amzn2.0.2.x86_64                                                                                                        15/64
+  Verifying  : libX11-1.6.7-3.amzn2.0.2.x86_64                                                                                                         16/64
+  Verifying  : mesa-libglapi-18.3.4-5.amzn2.0.1.x86_64                                                                                                 17/64
+  Verifying  : lksctp-tools-1.0.17-2.amzn2.0.2.x86_64                                                                                                  18/64
+  Verifying  : cairo-1.15.12-4.amzn2.x86_64                                                                                                            19/64
+  Verifying  : libXcursor-1.1.15-1.amzn2.x86_64                                                                                                        20/64
+  Verifying  : ttmkfdir-3.0.9-42.amzn2.0.2.x86_64                                                                                                      21/64
+  Verifying  : gtk-update-icon-cache-3.22.30-3.amzn2.x86_64                                                                                            22/64
+  Verifying  : libXcomposite-0.4.4-4.1.amzn2.0.2.x86_64                                                                                                23/64
+  Verifying  : libX11-common-1.6.7-3.amzn2.0.2.noarch                                                                                                  24/64
+  Verifying  : dejavu-fonts-common-2.33-6.amzn2.noarch                                                                                                 25/64
+  Verifying  : 1:cups-libs-1.6.3-51.amzn2.x86_64                                                                                                       26/64
+  Verifying  : libXau-1.0.8-2.1.amzn2.0.2.x86_64                                                                                                       27/64
+  Verifying  : libfontenc-1.1.3-3.amzn2.0.2.x86_64                                                                                                     28/64
+  Verifying  : libthai-0.1.14-9.amzn2.0.2.x86_64                                                                                                       29/64
+  Verifying  : xorg-x11-fonts-Type1-7.5-9.amzn2.noarch                                                                                                 30/64
+  Verifying  : libXrandr-1.5.1-2.amzn2.0.3.x86_64                                                                                                      31/64
+  Verifying  : gtk2-2.24.31-1.amzn2.0.2.x86_64                                                                                                         32/64
+  Verifying  : libXrender-0.9.10-1.amzn2.0.2.x86_64                                                                                                    33/64
+  Verifying  : avahi-libs-0.6.31-20.amzn2.x86_64                                                                                                       34/64
+  Verifying  : dejavu-sans-fonts-2.33-6.amzn2.noarch                                                                                                   35/64
+  Verifying  : python-lxml-3.2.1-4.amzn2.0.3.x86_64                                                                                                    36/64
+  Verifying  : fontconfig-2.13.0-4.3.amzn2.x86_64                                                                                                      37/64
+  Verifying  : fribidi-1.0.2-1.amzn2.1.x86_64                                                                                                          38/64
+  Verifying  : gdk-pixbuf2-2.36.12-3.amzn2.x86_64                                                                                                      39/64
+  Verifying  : hicolor-icon-theme-0.12-7.amzn2.noarch                                                                                                  40/64
+  Verifying  : harfbuzz-1.7.5-2.amzn2.x86_64                                                                                                           41/64
+  Verifying  : mesa-libgbm-18.3.4-5.amzn2.0.1.x86_64                                                                                                   42/64
+  Verifying  : giflib-4.1.6-9.amzn2.0.2.x86_64                                                                                                         43/64
+  Verifying  : libXinerama-1.1.3-2.1.amzn2.0.2.x86_64                                                                                                  44/64
+  Verifying  : 1:libglvnd-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                        45/64
+  Verifying  : libXi-1.7.9-1.amzn2.0.2.x86_64                                                                                                          46/64
+  Verifying  : pixman-0.34.0-1.amzn2.0.2.x86_64                                                                                                        47/64
+  Verifying  : libXxf86vm-1.1.4-1.amzn2.0.2.x86_64                                                                                                     48/64
+  Verifying  : libwayland-client-1.17.0-1.amzn2.x86_64                                                                                                 49/64
+  Verifying  : libxslt-1.1.28-6.amzn2.x86_64                                                                                                           50/64
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.312.b07-1.amzn2.0.2.x86_64                                                                          51/64
+  Verifying  : python-javapackages-3.4.1-11.amzn2.noarch                                                                                               52/64
+  Verifying  : pcsc-lite-libs-1.8.8-7.amzn2.x86_64                                                                                                     53/64
+  Verifying  : libXtst-1.2.3-1.amzn2.0.2.x86_64                                                                                                        54/64
+  Verifying  : libXft-2.3.2-2.amzn2.0.2.x86_64                                                                                                         55/64
+  Verifying  : copy-jdk-configs-3.3-10.amzn2.noarch                                                                                                    56/64
+  Verifying  : alsa-lib-1.1.4.1-2.amzn2.x86_64                                                                                                         57/64
+  Verifying  : jasper-libs-1.900.1-33.amzn2.x86_64                                                                                                     58/64
+  Verifying  : 1:libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                    59/64
+  Verifying  : libXfixes-5.0.3-1.amzn2.0.2.x86_64                                                                                                      60/64
+  Verifying  : libICE-1.0.9-9.amzn2.0.2.x86_64                                                                                                         61/64
+  Verifying  : graphite2-1.3.10-1.amzn2.0.2.x86_64                                                                                                     62/64
+  Verifying  : tzdata-java-2022a-1.amzn2.noarch                                                                                                        63/64
+  Verifying  : javapackages-tools-3.4.1-11.amzn2.noarch                                                                                                64/64
+
+Installed:
+  java-1.8.0-openjdk.x86_64 1:1.8.0.312.b07-1.amzn2.0.2
+
+Dependency Installed:
+  alsa-lib.x86_64 0:1.1.4.1-2.amzn2                                        atk.x86_64 0:2.22.0-3.amzn2.0.2
+  avahi-libs.x86_64 0:0.6.31-20.amzn2                                      cairo.x86_64 0:1.15.12-4.amzn2
+  copy-jdk-configs.noarch 0:3.3-10.amzn2                                   cups-libs.x86_64 1:1.6.3-51.amzn2
+  dejavu-fonts-common.noarch 0:2.33-6.amzn2                                dejavu-sans-fonts.noarch 0:2.33-6.amzn2
+  fontconfig.x86_64 0:2.13.0-4.3.amzn2                                     fontpackages-filesystem.noarch 0:1.44-8.amzn2
+  fribidi.x86_64 0:1.0.2-1.amzn2.1                                         gdk-pixbuf2.x86_64 0:2.36.12-3.amzn2
+  giflib.x86_64 0:4.1.6-9.amzn2.0.2                                        graphite2.x86_64 0:1.3.10-1.amzn2.0.2
+  gtk-update-icon-cache.x86_64 0:3.22.30-3.amzn2                           gtk2.x86_64 0:2.24.31-1.amzn2.0.2
+  harfbuzz.x86_64 0:1.7.5-2.amzn2                                          hicolor-icon-theme.noarch 0:0.12-7.amzn2
+  jasper-libs.x86_64 0:1.900.1-33.amzn2                                    java-1.8.0-openjdk-headless.x86_64 1:1.8.0.312.b07-1.amzn2.0.2
+  javapackages-tools.noarch 0:3.4.1-11.amzn2                               libICE.x86_64 0:1.0.9-9.amzn2.0.2
+  libSM.x86_64 0:1.2.2-2.amzn2.0.2                                         libX11.x86_64 0:1.6.7-3.amzn2.0.2
+  libX11-common.noarch 0:1.6.7-3.amzn2.0.2                                 libXau.x86_64 0:1.0.8-2.1.amzn2.0.2
+  libXcomposite.x86_64 0:0.4.4-4.1.amzn2.0.2                               libXcursor.x86_64 0:1.1.15-1.amzn2
+  libXdamage.x86_64 0:1.1.4-4.1.amzn2.0.2                                  libXext.x86_64 0:1.3.3-3.amzn2.0.2
+  libXfixes.x86_64 0:5.0.3-1.amzn2.0.2                                     libXft.x86_64 0:2.3.2-2.amzn2.0.2
+  libXi.x86_64 0:1.7.9-1.amzn2.0.2                                         libXinerama.x86_64 0:1.1.3-2.1.amzn2.0.2
+  libXrandr.x86_64 0:1.5.1-2.amzn2.0.3                                     libXrender.x86_64 0:0.9.10-1.amzn2.0.2
+  libXtst.x86_64 0:1.2.3-1.amzn2.0.2                                       libXxf86vm.x86_64 0:1.1.4-1.amzn2.0.2
+  libfontenc.x86_64 0:1.1.3-3.amzn2.0.2                                    libglvnd.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1
+  libglvnd-egl.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1                     libglvnd-glx.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1
+  libthai.x86_64 0:0.1.14-9.amzn2.0.2                                      libwayland-client.x86_64 0:1.17.0-1.amzn2
+  libwayland-server.x86_64 0:1.17.0-1.amzn2                                libxcb.x86_64 0:1.12-1.amzn2.0.2
+  libxshmfence.x86_64 0:1.2-1.amzn2.0.2                                    libxslt.x86_64 0:1.1.28-6.amzn2
+  lksctp-tools.x86_64 0:1.0.17-2.amzn2.0.2                                 log4j-cve-2021-44228-hotpatch.noarch 0:1.3-1.amzn2
+  mesa-libEGL.x86_64 0:18.3.4-5.amzn2.0.1                                  mesa-libGL.x86_64 0:18.3.4-5.amzn2.0.1
+  mesa-libgbm.x86_64 0:18.3.4-5.amzn2.0.1                                  mesa-libglapi.x86_64 0:18.3.4-5.amzn2.0.1
+  pango.x86_64 0:1.42.4-4.amzn2                                            pcsc-lite-libs.x86_64 0:1.8.8-7.amzn2
+  pixman.x86_64 0:0.34.0-1.amzn2.0.2                                       python-javapackages.noarch 0:3.4.1-11.amzn2
+  python-lxml.x86_64 0:3.2.1-4.amzn2.0.3                                   ttmkfdir.x86_64 0:3.0.9-42.amzn2.0.2
+  tzdata-java.noarch 0:2022a-1.amzn2                                       xorg-x11-font-utils.x86_64 1:7.5-21.amzn2
+  xorg-x11-fonts-Type1.noarch 0:7.5-9.amzn2
+
+Complete!
+[root@ip-172-31-87-119 ~]# java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (build 25.312-b07, mixed mode)
+[root@ip-172-31-87-119 ~]# alternatives --config java
+
+There is 1 program that provides 'java'.
+
+  Selection    Command
+-----------------------------------------------
+*+ 1           java-1.8.0-openjdk.x86_64 (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64/jre/bin/java)
+
+Enter to keep the current selection[+], or type selection number:
+[root@ip-172-31-87-119 ~]# wget https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar
+--2022-06-13 11:24:58--  https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar
+Resolving javabhaktaws.s3.amazonaws.com (javabhaktaws.s3.amazonaws.com)... 52.217.104.116
+Connecting to javabhaktaws.s3.amazonaws.com (javabhaktaws.s3.amazonaws.com)|52.217.104.116|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2022-06-13 11:24:59 ERROR 403: Forbidden.
+
+[root@ip-172-31-87-119 ~]# ls -l
+total 0
+[root@ip-172-31-87-119 ~]# wget https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar
+--2022-06-13 11:42:45--  https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar
+Resolving javabhaktaws.s3.amazonaws.com (javabhaktaws.s3.amazonaws.com)... 52.217.136.97
+Connecting to javabhaktaws.s3.amazonaws.com (javabhaktaws.s3.amazonaws.com)|52.217.136.97|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2022-06-13 11:42:45 ERROR 403: Forbidden.
+
+[root@ip-172-31-87-119 ~]# wget https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar
+--2022-06-13 11:50:35--  https://javabhaktaws.s3.amazonaws.com/spring-boot-aws-exe.jar
+Resolving javabhaktaws.s3.amazonaws.com (javabhaktaws.s3.amazonaws.com)... 52.217.43.76
+Connecting to javabhaktaws.s3.amazonaws.com (javabhaktaws.s3.amazonaws.com)|52.217.43.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17609368 (17M) [application/x-www-form-urlencoded]
+Saving to: ‘spring-boot-aws-exe.jar’
+
+100%[===================================================================================================================>] 17,609,368  43.3MB/s   in 0.4s
+
+2022-06-13 11:50:36 (43.3 MB/s) - ‘spring-boot-aws-exe.jar’ saved [17609368/17609368]
+
+[root@ip-172-31-87-119 ~]# ls -l
+total 17200
+-rw-r--r-- 1 root root 17609368 Jun 13 10:59 spring-boot-aws-exe.jar
+[root@ip-172-31-87-119 ~]# java -jar spring-boot-aws-exe.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.0)
+
+2022-06-13 11:53:01.198  INFO 30467 --- [           main] c.j.a.a.SpringBootAwsExampleApplication  : Starting SpringBootAwsExampleApplication v0.0.1-SNAPSHOT using Java 1.8.0_312 on ip-172-31-87-119.ec2.internal with PID 30467 (/root/spring-boot-aws-exe.jar started by root in /root)
+2022-06-13 11:53:01.209  INFO 30467 --- [           main] c.j.a.a.SpringBootAwsExampleApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-06-13 11:53:03.825  INFO 30467 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-13 11:53:03.859  INFO 30467 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-13 11:53:03.863  INFO 30467 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-13 11:53:04.026  INFO 30467 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-13 11:53:04.031  INFO 30467 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2653 ms
+2022-06-13 11:53:05.501  INFO 30467 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-13 11:53:05.534  INFO 30467 --- [           main] c.j.a.a.SpringBootAwsExampleApplication  : Started SpringBootAwsExampleApplication in 5.712 seconds (JVM running for 6.693)
